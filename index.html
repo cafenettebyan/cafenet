@@ -117,12 +117,58 @@ html { scroll-behavior: smooth; }
   <summary>دریافت بیمه</summary>
   <p>خدمات بیمه را اینجا انجام می‌دهیم. برای ورود به سامانه لمس کنید.</p>
   <a class="btn" href="https://eservices.tamin.ir/view/#/main" target="_blank">ورود به سایت تأمین اجتماعی</a>
+<hr style="margin:12px 0;border-color:rgba(255,255,255,0.3);">
+<p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
+<select id="bimeType" style="padding:8px;font-size:16px;">
+  <option value="آزاد">بیمه آزاد</option>
+  <option value="رانندگان">بیمه رانندگان</option>
+  <option value="کارفرما">بیمه کارفرما</option>
+</select>
+<input type="text" id="bimeName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+<input type="text" id="bimePhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+<br>
+<a class="btn" href="#" onclick="sendBimeOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
+
+<script>
+function sendBimeOrder() {
+  var type = document.getElementById("bimeType").value;
+  var name = document.getElementById("bimeName").value;
+  var phone = document.getElementById("bimePhone").value;
+  if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
+  var msg = "سلام، درخواست بیمه:\nنوع: " + type + "\nنام: " + name + "\nشماره: " + phone;
+  var chat = "https://eitaa.ir/tebyan_8449";
+  navigator.clipboard.writeText(msg).then(function () {
+    alert("درخواست شما ثبت شد. اگر برای کد پیامکی با شما تماس گرفتیم، لطفاً پاسخ دهید تا کارتان انجام شود.");
+    window.location.href = chat;
+  });
+}
+</script>
 </details>
     <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('1859735701وظایف و اختیارات رئیس قوه قضاییه2.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
   <summary>ابلاغیه</summary>
   <p>ابلاغیه‌های قضایی خود را اینجا دریافت کنید.</p>
   <a class="btn" href="https://iehraz.adliran.ir/Login/Authenticate?ReturnUrl=http://eblagh1.adliran.ir/ENotice/Index&SystemName=ENoticeServices&isSelectNaturalPerson=True&isSelectNaturalForigenPerson=True&isSelectLegalPerson=True&isSelectJudPerson=True&LoginTitle=%d8%b3%d8%a7%d9%85%d8%a7%d9%86%d9%87%20%d8%a7%d8%a8%d9%84%d8%a7%d8%ba%20%d8%a7%d9%84%da%a9%d8%aa%d8%b1%d9%88%d9%86%db%8c%da%a9%20%d9%82%d8%b6%d8%a7%db%8c%db%8c" target="_blank">ورود به سامانه ثنا</a>
-</details>
+<hr style="margin:12px 0;border-color:rgba(255,255,255,0.3);">
+<p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
+<input type="text" id="eblaghName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;">
+<input type="text" id="eblaghPhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+<br>
+<a class="btn" href="#" onclick="sendEblaghOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
+
+<script>
+function sendEblaghOrder() {
+  var name = document.getElementById("eblaghName").value;
+  var phone = document.getElementById("eblaghPhone").value;
+  if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
+  var msg = "سلام، درخواست ابلاغیه:\nنام: " + name + "\nشماره: " + phone;
+  var chat = "https://eitaa.ir/tebyan_8449";
+  navigator.clipboard.writeText(msg).then(function () {
+    alert("درخواست شما ثبت شد. برای پیگیری کد پیامکی سامانه ابلاغیه، با شما تماس می‌گیریم.");
+    window.location.href = chat;
+  });
+}
+</script>
+    </details>
   <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('لایف-استایل.webp');background-size:cover;background-position:center;color:white;min-height:90px;">
   <summary>پرینت و کپی</summary>
 
