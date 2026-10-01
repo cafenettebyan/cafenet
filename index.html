@@ -149,6 +149,7 @@ html { scroll-behavior: smooth; }
 function sendBimeOrder() {
   var type = document.getElementById("bimeType").value;
   var name = document.getElementById("bimeName").value;
+  var MeliNumber = document.getElementById("MeliNumber").value;
   var phone = document.getElementById("bimePhone").value;
   if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
   var msg = "سلام، درخواست بیمه:\nنوع: " + type + "\nنام: " + name + "\nشماره: " + phone;
@@ -176,6 +177,7 @@ function sendBimeOrder() {
 <script>
 function sendEblaghOrder() {
   var name = document.getElementById("eblaghName").value;
+  var MeliNumber = document.getElementById("MeliNumber").value;
   var phone = document.getElementById("eblaghPhone").value;
   if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
   var msg = "سلام، درخواست ابلاغیه:\nنام: " + name + "\nشماره: " + phone;
