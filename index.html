@@ -116,10 +116,13 @@
       var sides = document.getElementById("pSides").value;
       var count = document.getElementById("pCount").value;
       var total = count * printPrices[type][size][sides];
+var out = document.getElementById("pTotal");
 if (type === "color" && count > 10) {
-  total = Math.round(total / 2);
+  var half = Math.round(total / 2);
+  out.innerHTML = '<span style="text-decoration:line-through;text-decoration-color:#22a559;text-decoration-thickness:3px;">' + total.toLocaleString("fa-IR") + '</span> ' + half.toLocaleString("fa-IR");
+} else {
+  out.textContent = total.toLocaleString("fa-IR");
 }
-      document.getElementById("pTotal").textContent = total.toLocaleString("fa-IR");
     }
     calcPrint();
   </script>
