@@ -70,7 +70,22 @@
 </details>
     <div class="card">پرینت و کپی</div> 
     <div class="card">تمامی خدمات بانک رسالت</div>
-    <div class="card">منگنه و فنرزنی کتاب های درسی</div>
+    <details class="card">
+  <summary>فنرزنی و منگنه کتاب درسی</summary>
+  <p>تعداد کتاب را وارد کنید:</p>
+  <input type="number" id="bookCount" min="1" value="1" oninput="calcPrice()" style="padding:8px;width:100px;font-size:16px;">
+  <p>قیمت نهایی: <strong id="finalPrice"></strong> تومان</p>
+
+  <script>
+    var pricePerBook = 75000; 
+    function calcPrice() {
+      var count = document.getElementById("bookCount").value;
+      var total = count * pricePerBook;
+      document.getElementById("finalPrice").textContent = total.toLocaleString("fa-IR");
+    }
+    calcPrice();
+  </script>
+</details>
   </section>
 
   <section>
