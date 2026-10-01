@@ -116,6 +116,9 @@
       var sides = document.getElementById("pSides").value;
       var count = document.getElementById("pCount").value;
       var total = count * printPrices[type][size][sides];
+if (type === "color" && count > 10) {
+  total = Math.round(total / 2);
+}
       document.getElementById("pTotal").textContent = total.toLocaleString("fa-IR");
     }
     calcPrint();
