@@ -153,6 +153,7 @@ function sendBimeOrder() {
   if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
   var msg = "سلام، درخواست بیمه:\nنوع: " + type + "\nنام: " + name + "\nشماره: " + phone;
   var chat = "https://eitaa.ir/tebyan_8449";
+  sendToSheet("بیمه", "نوع: " + type, name, phone);
   navigator.clipboard.writeText(msg).then(function () {
     showToast("درخواست شما ثبت شد. اگر برای کد پیامکی با شما تماس گرفتیم، لطفاً پاسخ دهید تا کارتان انجام شود.");
     window.location.href = chat;
@@ -179,6 +180,7 @@ function sendEblaghOrder() {
   if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
   var msg = "سلام، درخواست ابلاغیه:\nنام: " + name + "\nشماره: " + phone;
   var chat = "https://eitaa.ir/tebyan_8449";
+  sendToSheet("ابلاغیه", "", name, phone);
   navigator.clipboard.writeText(msg).then(function () {
     showToast("درخواست شما ثبت شد. برای پیگیری کد پیامکی سامانه ابلاغیه، با شما تماس می‌گیریم.");
     window.location.href = chat;
@@ -235,6 +237,7 @@ function sendPrintOrder() {
   var price = document.getElementById("pTotal").textContent;
   var msg = "سلام، سفارش پرینت و کپی:\nنوع: " + type + "\nسایز: " + size + "\n" + sides + "\nتعداد: " + count + "\nقیمت: " + price + " تومان";
   var chat = "https://eitaa.ir/tebyan_8449";
+  sendToSheet("پرینت و کپی", type + " - " + size + " - " + sides + " - تعداد: " + count + " - قیمت: " + price, "", "");
   navigator.clipboard.writeText(msg).then(function () {
     showToast("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
     window.location.href = chat;
