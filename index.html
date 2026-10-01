@@ -68,7 +68,59 @@
   <p>ابلاغیه‌های قضایی خود را اینجا دریافت کنید.</p>
   <a class="btn" href="https://iehraz.adliran.ir/Login/Authenticate?ReturnUrl=http://eblagh1.adliran.ir/ENotice/Index&SystemName=ENoticeServices&isSelectNaturalPerson=True&isSelectNaturalForigenPerson=True&isSelectLegalPerson=True&isSelectJudPerson=True&LoginTitle=%d8%b3%d8%a7%d9%85%d8%a7%d9%86%d9%87%20%d8%a7%d8%a8%d9%84%d8%a7%d8%ba%20%d8%a7%d9%84%da%a9%d8%aa%d8%b1%d9%88%d9%86%db%8c%da%a9%20%d9%82%d8%b6%d8%a7%db%8c%db%8c" target="_blank">ورود به سامانه ثنا</a>
 </details>
-    <div class="card">پرینت و کپی</div> 
+    <details class="card">
+  <summary>پرینت و کپی</summary>
+
+  <p>نوع چاپ:</p>
+  <select id="pType" onchange="calcPrint()" style="padding:8px;font-size:16px;">
+    <option value="bw">سیاه و سفید</option>
+    <option value="color">رنگی</option>
+  </select>
+
+  <p>سایز برگه:</p>
+  <select id="pSize" onchange="calcPrint()" style="padding:8px;font-size:16px;">
+    <option value="A4">A4</option>
+    <option value="A5">A5</option>
+    <option value="A3">A3</option>
+  </select>
+
+  <p>یک رو یا دو رو:</p>
+  <select id="pSides" onchange="calcPrint()" style="padding:8px;font-size:16px;">
+    <option value="one">یک رو</option>
+    <option value="two">دو رو</option>
+  </select>
+
+  <p>تعداد برگ:</p>
+  <input type="number" id="pCount" min="1" value="1" oninput="calcPrint()" style="padding:8px;width:100px;font-size:16px;">
+
+  <p>قیمت نهایی: <strong id="pTotal"></strong> تومان</p>
+
+  <script>
+    // قیمت هر برگ به تومان (فقط عدد، بدون کاما)
+    var printPrices = {
+      bw: {
+        A4: { one: 10500, two: 15000 },
+        A5: { one: 6200,  two: 10000 },
+        A3: { one: 17500, two: 24300 }
+      },
+      color: {
+        A4: { one: 43800,  two: 55600 },
+        A5: { one: 21900,  two: 27800 },
+        A3: { one: 73000, two: 81200 }
+      }
+    };
+
+    function calcPrint() {
+      var type = document.getElementById("pType").value;
+      var size = document.getElementById("pSize").value;
+      var sides = document.getElementById("pSides").value;
+      var count = document.getElementById("pCount").value;
+      var total = count * printPrices[type][size][sides];
+      document.getElementById("pTotal").textContent = total.toLocaleString("fa-IR");
+    }
+    calcPrint();
+  </script>
+</details> 
     <div class="card">تمامی خدمات بانک رسالت</div>
     <details class="card">
   <summary>فنرزنی و منگنه کتاب درسی</summary>
