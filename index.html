@@ -112,6 +112,7 @@ html { scroll-behavior: smooth; }
 </head>
 
 <body>
+  <div id="toast"></div>
   <button id="menuBtn" onclick="toggleMenu()">☰</button>
 <nav id="sideMenu">
   <a href="#services" onclick="toggleMenu()">خدمات ما</a>
@@ -273,6 +274,12 @@ if (type === "color" && count > 10) {
 <a class="btn" href="#" onclick="sendBookOrder();return false;">ارسال سفارش</a>
   <script>
     var pricePerBook = 75000; 
+    function showToast(msg) {
+  var t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  setTimeout(function () { t.style.display = "none"; }, 6000);
+}
     function calcPrice() {
       var count = document.getElementById("bookCount").value;
       var total = count * pricePerBook;
