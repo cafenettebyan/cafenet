@@ -13,12 +13,12 @@
       line-height: 1.8;
     }
     header {
-  background: linear-gradient(135deg, #1b2a49, #2e4a7d);
-  color: white;
-  text-align: center;
-  padding: 40px 16px;
-  border-radius: 0 0 28px 28px;
-}
+      background: linear-gradient(135deg, #1b2a49, #2e4a7d);
+      color: white;
+      text-align: center;
+      padding: 40px 16px;
+      border-radius: 0 0 28px 28px;
+    }
     header h1 { margin: 0 0 8px; }
     section {
       max-width: 700px;
@@ -48,78 +48,79 @@
       font-size: 14px;
     }
     summary {
-  display: inline-block;
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-summary::-webkit-details-marker { display: none; }
-html { scroll-behavior: smooth; }
-#menuBtn {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 1000;
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 8px;
-  background: white;
-  color: #1b2a49;
-  font-size: 26px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-}
-#sideMenu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 240px;
-  height: 100%;
-  background: #1b2a49;
-  z-index: 999;
-  padding: 70px 16px 16px;
-  box-sizing: border-box;
-  transform: translateX(100%);
-  transition: transform 0.3s;
-}
-#sideMenu.open { transform: none; }
-#sideMenu a {
-  display: block;
-  color: white;
-  padding: 14px 8px;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-   #toast {
-  position: fixed;
-  top: 12px;
-  left: 12px;
-  background: #1b2a49;
-  color: white;
-  padding: 14px 18px;
-  border-radius: 8px;
-  max-width: 260px;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  z-index: 2000;
-  display: none;
-} 
+      display: inline-block;
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    html { scroll-behavior: smooth; }
+    #menuBtn {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #1b2a49;
+      font-size: 26px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    #sideMenu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 240px;
+      height: 100%;
+      background: #1b2a49;
+      z-index: 999;
+      padding: 70px 16px 16px;
+      box-sizing: border-box;
+      transform: translateX(100%);
+      transition: transform 0.3s;
+    }
+    #sideMenu.open { transform: none; }
+    #sideMenu a {
+      display: block;
+      color: white;
+      padding: 14px 8px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    #toast {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      background: #1b2a49;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 8px;
+      max-width: 260px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      z-index: 2000;
+      display: none;
+    }
   </style>
 </head>
 
 <body>
   <div id="toast"></div>
   <button id="menuBtn" onclick="toggleMenu()">☰</button>
-<nav id="sideMenu">
-  <a href="#services" onclick="toggleMenu()">خدمات ما</a>
-  <a href="#hours" onclick="toggleMenu()">ساعت کاری</a>
-  <a href="#address" onclick="toggleMenu()">آدرس ما</a>
-  <a href="#contact" onclick="toggleMenu()">تماس با ما</a>
-</nav>
+  <nav id="sideMenu">
+    <a href="#services" onclick="toggleMenu()">خدمات ما</a>
+    <a href="#hours" onclick="toggleMenu()">ساعت کاری</a>
+    <a href="#address" onclick="toggleMenu()">آدرس ما</a>
+    <a href="#contact" onclick="toggleMenu()">تماس با ما</a>
+  </nav>
+
   <header>
     <img src="IMG_20261001_085051_211.jpg" alt="لوگو" style="max-width:120px;border-radius:12px;">
     <h1>کافی‌نت تبیان</h1>
@@ -128,194 +129,190 @@ html { scroll-behavior: smooth; }
 
   <section>
     <h2 id="services">خدمات ما</h2>
-<details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('4321847.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
-  <summary>دریافت بیمه</summary>
-  <p>خدمات بیمه را اینجا انجام می‌دهیم. برای ورود به سامانه لمس کنید.</p>
-  <a class="btn" href="https://eservices.tamin.ir/view/#/main" target="_blank">ورود به سایت تأمین اجتماعی</a>
-<hr style="margin:12px 0;border-color:rgba(255,255,255,0.3);">
-<p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
-<select id="bimeType" style="padding:8px;font-size:16px;">
-  <option value="آزاد">بیمه آزاد</option>
-  <option value="رانندگان">بیمه رانندگان</option>
-  <option value="کارفرما">بیمه کارفرما</option>
-</select>
-<input type="text" id="bimeName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
-  <input type="text" id="bimemeliNumber" placeholder="شماره ملی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
-<input type="text" id="bimePhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
-<br>
-<a class="btn" href="#" onclick="sendBimeOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
 
-<script>
-function sendBimeOrder() {
-  var type = document.getElementById("bimeType").value;
-  var name = document.getElementById("bimeName").value;
-  var meliNumber = document.getElementById("MeliNumber").value;
-  var phone = document.getElementById("bimePhone").value;
-  if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
-  var msg = "سلام، درخواست بیمه:\nنوع: " + type + "\nنام: " + name + "\nشماره: " + phone;
-  var chat = "https://eitaa.ir/tebyan_8449";
-  sendToSheet("بیمه", "نوع: " + type, name, phone);
-  navigator.clipboard.writeText(msg).then(function () {
-    showToast("درخواست شما ثبت شد. اگر برای کد پیامکی با شما تماس گرفتیم، لطفاً پاسخ دهید تا کارتان انجام شود.");
-    window.location.href = chat;
-  });
-}
-</script>
-</details>
-    <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('1859735701وظایف و اختیارات رئیس قوه قضاییه2.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
-  <summary>ابلاغیه</summary>
-  <p>ابلاغیه‌های قضایی خود را اینجا دریافت کنید.</p>
-  <a class="btn" href="https://iehraz.adliran.ir/Login/Authenticate?ReturnUrl=http://eblagh1.adliran.ir/ENotice/Index&SystemName=ENoticeServices&isSelectNaturalPerson=True&isSelectNaturalForigenPerson=True&isSelectLegalPerson=True&isSelectJudPerson=True&LoginTitle=%d8%b3%d8%a7%d9%85%d8%a7%d9%86%d9%87%20%d8%a7%d8%a8%d9%84%d8%a7%d8%ba%20%d8%a7%d9%84%da%a9%d8%aa%d8%b1%d9%88%d9%86%db%8c%da%a9%20%d9%82%d8%b6%d8%a7%db%8c%db%8c" target="_blank">ورود به سامانه ثنا</a>
-<hr style="margin:12px 0;border-color:rgba(255,255,255,0.3);">
-<p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
-<input type="text" id="eblaghName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;">
-<input type="text" id="eblaghPhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
-    <input type="text" id="eblagmeliNumber" placeholder="رمز شخصی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">  
-<br>
-<a class="btn" href="#" onclick="sendEblaghOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
+    <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('4321847.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
+      <summary>دریافت بیمه</summary>
+      <p>خدمات بیمه را اینجا انجام می‌دهیم. برای ورود به سامانه لمس کنید.</p>
+      <a class="btn" href="https://eservices.tamin.ir/view/#/main" target="_blank">ورود به سایت تأمین اجتماعی</a>
+      <hr style="margin:12px 0;border-color:rgba(255,255,255,0.3);">
+      <p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
+      <select id="bimeType" style="padding:8px;font-size:16px;">
+        <option value="آزاد">بیمه آزاد</option>
+        <option value="رانندگان">بیمه رانندگان</option>
+        <option value="کارفرما">بیمه کارفرما</option>
+      </select>
+      <input type="text" id="bimeName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+      <input type="text" id="bimePhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+      <br>
+      <a class="btn" href="#" onclick="sendBimeOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
 
-<script>
-function sendEblaghOrder() {
-  var name = document.getElementById("eblaghName").value;
-  var meliNumber = document.getElementById("MeliNumber").value;
-  var phone = document.getElementById("eblaghPhone").value;
-  if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
-  var msg = "سلام، درخواست ابلاغیه:\nنام: " + name + "\nشماره: " + phone;
-  var chat = "https://eitaa.ir/tebyan_8449";
-  sendToSheet("ابلاغیه", "", name, phone);
-  navigator.clipboard.writeText(msg).then(function () {
-    showToast("درخواست شما ثبت شد. برای پیگیری کد پیامکی سامانه ابلاغیه، با شما تماس می‌گیریم.");
-    window.location.href = chat;
-  });
-}
-</script>
+      <script>
+        function sendBimeOrder() {
+          var type = document.getElementById("bimeType").value;
+          var name = document.getElementById("bimeName").value;
+          var phone = document.getElementById("bimePhone").value;
+          if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
+          var msg = "سلام، درخواست بیمه:\nنوع: " + type + "\nنام: " + name + "\nشماره: " + phone;
+          var chat = "https://eitaa.ir/tebyan_8449";
+          sendToSheet("بیمه", "نوع: " + type, name, phone);
+          navigator.clipboard.writeText(msg).then(function () {
+            showToast("درخواست شما ثبت شد. اگر برای کد پیامکی با شما تماس گرفتیم، لطفاً پاسخ دهید تا کارتان انجام شود.");
+            window.location.href = chat;
+          });
+        }
+      </script>
     </details>
-  <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('لایف-استایل.webp');background-size:cover;background-position:center;color:white;min-height:90px;">
-  <summary>پرینت و کپی</summary>
 
-  <p>نوع چاپ:</p>
-  <select id="pType" onchange="calcPrint()" style="padding:8px;font-size:16px;">
-    <option value="bw">سیاه و سفید</option>
-    <option value="color">رنگی</option>
-  </select>
+    <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('1859735701وظایف و اختیارات رئیس قوه قضاییه2.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
+      <summary>ابلاغیه</summary>
+      <p>ابلاغیه‌های قضایی خود را اینجا دریافت کنید.</p>
+      <a class="btn" href="https://iehraz.adliran.ir/Login/Authenticate?ReturnUrl=http://eblagh1.adliran.ir/ENotice/Index&SystemName=ENoticeServices&isSelectNaturalPerson=True&isSelectNaturalForigenPerson=True&isSelectLegalPerson=True&isSelectJudPerson=True&LoginTitle=%d8%b3%d8%a7%d9%85%d8%a7%d9%86%d9%87%20%d8%a7%d8%a8%d9%84%d8%a7%d8%ba%20%d8%a7%d9%84%da%a9%d8%aa%d8%b1%d9%88%d9%86%db%8c%da%a9%20%d9%82%d8%b6%d8%a7%db%8c%db%8c" target="_blank">ورود به سامانه ثنا</a>
+      <hr style="margin:12px 0;border-color:rgba(255,255,255,0.3);">
+      <p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
+      <input type="text" id="eblaghName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;">
+      <input type="text" id="eblaghPhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+      <br>
+      <a class="btn" href="#" onclick="sendEblaghOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
 
-  <p>سایز برگه:</p>
-  <select id="pSize" onchange="calcPrint()" style="padding:8px;font-size:16px;">
-    <option value="A4">A4</option>
-    <option value="A5">A5</option>
-    <option value="A3">A3</option>
-  </select>
+      <script>
+        function sendEblaghOrder() {
+          var name = document.getElementById("eblaghName").value;
+          var phone = document.getElementById("eblaghPhone").value;
+          if (!name || !phone) { alert("لطفاً نام و شماره تماس را وارد کنید."); return; }
+          var msg = "سلام، درخواست ابلاغیه:\nنام: " + name + "\nشماره: " + phone;
+          var chat = "https://eitaa.ir/tebyan_8449";
+          sendToSheet("ابلاغیه", "", name, phone);
+          navigator.clipboard.writeText(msg).then(function () {
+            showToast("درخواست شما ثبت شد. برای پیگیری کد پیامکی سامانه ابلاغیه، با شما تماس می‌گیریم.");
+            window.location.href = chat;
+          });
+        }
+      </script>
+    </details>
 
-  <p>یک رو یا دو رو:</p>
-  <select id="pSides" onchange="calcPrint()" style="padding:8px;font-size:16px;">
-    <option value="one">یک رو</option>
-    <option value="two">دو رو</option>
-  </select>
+    <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('لایف-استایل.webp');background-size:cover;background-position:center;color:white;min-height:90px;">
+      <summary>پرینت و کپی</summary>
+      <p>نوع چاپ:</p>
+      <select id="pType" onchange="calcPrint()" style="padding:8px;font-size:16px;">
+        <option value="bw">سیاه و سفید</option>
+        <option value="color">رنگی</option>
+      </select>
+      <p>سایز برگه:</p>
+      <select id="pSize" onchange="calcPrint()" style="padding:8px;font-size:16px;">
+        <option value="A4">A4</option>
+        <option value="A5">A5</option>
+        <option value="A3">A3</option>
+      </select>
+      <p>یک رو یا دو رو:</p>
+      <select id="pSides" onchange="calcPrint()" style="padding:8px;font-size:16px;">
+        <option value="one">یک رو</option>
+        <option value="two">دو رو</option>
+      </select>
+      <p>تعداد برگ:</p>
+      <input type="number" id="pCount" min="1" value="1" oninput="calcPrint()" style="padding:8px;width:100px;font-size:16px;">
+      <p>قیمت نهایی: <strong id="pTotal"></strong> تومان</p>
+      <a class="btn" href="#" onclick="sendPrintOrder();return false;">ارسال سفارش</a>
 
-  <p>تعداد برگ:</p>
-  <input type="number" id="pCount" min="1" value="1" oninput="calcPrint()" style="padding:8px;width:100px;font-size:16px;">
+      <script>
+        var printPrices = {
+          bw: {
+            A4: { one: 10500, two: 15000 },
+            A5: { one: 6200,  two: 10000 },
+            A3: { one: 17500, two: 24300 }
+          },
+          color: {
+            A4: { one: 43800,  two: 55600 },
+            A5: { one: 21900,  two: 27800 },
+            A3: { one: 73000, two: 81200 }
+          }
+        };
+        function calcPrint() {
+          var type = document.getElementById("pType").value;
+          var size = document.getElementById("pSize").value;
+          var sides = document.getElementById("pSides").value;
+          var count = document.getElementById("pCount").value;
+          var total = count * printPrices[type][size][sides];
+          var out = document.getElementById("pTotal");
+          if (type === "color" && count > 10) {
+            var half = Math.round(total / 2);
+            out.innerHTML = '<span style="text-decoration:line-through;text-decoration-color:#22a559;text-decoration-thickness:3px;">' + total.toLocaleString("fa-IR") + '</span> ' + half.toLocaleString("fa-IR");
+          } else {
+            out.textContent = total.toLocaleString("fa-IR");
+          }
+        }
+        function sendPrintOrder() {
+          var type = document.getElementById("pType").value === "bw" ? "سیاه و سفید" : "رنگی";
+          var size = document.getElementById("pSize").value;
+          var sides = document.getElementById("pSides").value === "one" ? "یک رو" : "دو رو";
+          var count = document.getElementById("pCount").value;
+          var price = document.getElementById("pTotal").textContent;
+          var msg = "سلام، سفارش پرینت و کپی:\nنوع: " + type + "\nسایز: " + size + "\n" + sides + "\nتعداد: " + count + "\nقیمت: " + price + " تومان";
+          var chat = "https://eitaa.ir/tebyan_8449";
+          sendToSheet("پرینت و کپی", type + " - " + size + " - " + sides + " - تعداد: " + count + " - قیمت: " + price, "", "");
+          navigator.clipboard.writeText(msg).then(function () {
+            showToast("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
+            window.location.href = chat;
+          }).catch(function () {
+            window.location.href = chat;
+          });
+        }
+        calcPrint();
+      </script>
+    </details>
 
-  <p>قیمت نهایی: <strong id="pTotal"></strong> تومان</p>
+    <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('IMG_20261001_111943.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
+      <summary>خدمات بانک رسالت</summary>
+      <p>یکی از خدمات را انتخاب کنید:</p>
+      <a class="btn" href="https://pishkhan.rqbank.ir/#/login" target="_blank" style="margin:4px;">پیشخوان رسالت</a>
+      <a class="btn" href="https://www.mresalat.ir/fa" target="_blank" style="margin:4px;">ام رسالت</a>
+      <a class="btn" href="https://imerat.ir/" target="_blank" style="margin:4px;">اعتبارسنجی</a>
+    </details>
 
-  <script>
-    // قیمت هر برگ به تومان (فقط عدد، بدون کاما)
-    var printPrices = {
-      bw: {
-        A4: { one: 10500, two: 15000 },
-        A5: { one: 6200,  two: 10000 },
-        A3: { one: 17500, two: 24300 }
-      },
-      color: {
-        A4: { one: 43800,  two: 55600 },
-        A5: { one: 21900,  two: 27800 },
-        A3: { one: 73000, two: 81200 }
-      }
-    };
-function sendPrintOrder() {
-  var type = document.getElementById("pType").value === "bw" ? "سیاه و سفید" : "رنگی";
-  var size = document.getElementById("pSize").value;
-  var sides = document.getElementById("pSides").value === "one" ? "یک رو" : "دو رو";
-  var count = document.getElementById("pCount").value;
-  var price = document.getElementById("pTotal").textContent;
-  var msg = "سلام، سفارش پرینت و کپی:\nنوع: " + type + "\nسایز: " + size + "\n" + sides + "\nتعداد: " + count + "\nقیمت: " + price + " تومان";
-  var chat = "https://eitaa.ir/tebyan_8449";
-  sendToSheet("پرینت و کپی", type + " - " + size + " - " + sides + " - تعداد: " + count + " - قیمت: " + price, "", "");
-  navigator.clipboard.writeText(msg).then(function () {
-    showToast("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
-    window.location.href = chat;
-  }).catch(function () {
-    window.location.href = chat;
-  });
-}
-    function calcPrint() {
-      var type = document.getElementById("pType").value;
-      var size = document.getElementById("pSize").value;
-      var sides = document.getElementById("pSides").value;
-      var count = document.getElementById("pCount").value;
-      var total = count * printPrices[type][size][sides];
-var out = document.getElementById("pTotal");
-if (type === "color" && count > 10) {
-  var half = Math.round(total / 2);
-  out.innerHTML = '<span style="text-decoration:line-through;text-decoration-color:#22a559;text-decoration-thickness:3px;">' + total.toLocaleString("fa-IR") + '</span> ' + half.toLocaleString("fa-IR");
-} else {
-  out.textContent = total.toLocaleString("fa-IR");
-}
-    }
-    calcPrint();
-  </script>
-</details> 
-<details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('IMG_20261001_111943.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
-  <summary>خدمات بانک رسالت</summary>
-  <p>یکی از خدمات را انتخاب کنید:</p>
-  <a class="btn" href="https://pishkhan.rqbank.ir/#/login" target="_blank" style="margin:4px;">پیشخوان رسالت</a>
-  <a class="btn" href="https://www.mresalat.ir/fa" target="_blank" style="margin:4px;">ام رسالت</a>
-  <a class="btn" href="https://imerat.ir/" target="_blank" style="margin:4px;">اعتبارسنجی</a>
-</details>
-<details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('6-sml.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
-  <summary>فنرزنی و منگنه کتاب درسی</summary>
-  <p>تعداد کتاب را وارد کنید:</p>
-  <input type="number" id="bookCount" min="1" value="1" oninput="calcPrice()" style="padding:8px;width:100px;font-size:16px;">
-  <p>قیمت نهایی: <strong id="finalPrice"></strong> تومان</p>
-<a class="btn" href="#" onclick="sendBookOrder();return false;">ارسال سفارش</a>
-  <script>
-    var pricePerBook = 75000; 
-    function showToast(msg) {
-  var t = document.getElementById("toast");
-  t.textContent = msg;
-  t.style.display = "block";
-  setTimeout(function () { t.style.display = "none"; }, 6000);
-}
-    function calcPrice() {
-      var count = document.getElementById("bookCount").value;
-      var total = count * pricePerBook;
-      document.getElementById("finalPrice").textContent = total.toLocaleString("fa-IR");
-    }
-    function sendBookOrder() {
-  var count = document.getElementById("bookCount").value;
-  var price = document.getElementById("finalPrice").textContent;
-  var msg = "سلام، سفارش فنرزنی و منگنه کتاب درسی:\nتعداد کتاب: " + count + "\nقیمت نهایی: " + price + " تومان";
-  var chat = "https://eitaa.ir/tebyan_8449";
-      sendToSheet("فنرزنی", "تعداد: " + count + " - قیمت: " + price + " تومان", "", "");
-  navigator.clipboard.writeText(msg).then(function () {
-    showToast("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
-    window.location.href = chat;
-  }).catch(function () {
-    window.location.href = chat;
-  });
-}
-  function sendToSheet(type, details, name, phone) {
-  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSddX-JLIy3NFGOkaRatuhEfsZuBuqd-g7gkjRZa52WAZhwxIg/formResponse";
-  var data = new FormData();
-  data.append("entry.1778279713", type);
-  data.append("entry.129922065", details);
-  data.append("entry.2136911934", name);
-  data.append("entry.1860252129", phone);
-data.append("entry.1777667639", meliNumber);
-  fetch(formUrl, { method: "POST", mode: "no-cors", body: data });
-    }  
-    calcPrice();
-  </script>
-</details>
+    <details class="card" style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('6-sml.jpg');background-size:cover;background-position:center;color:white;min-height:90px;">
+      <summary>فنرزنی و منگنه کتاب درسی</summary>
+      <p>تعداد کتاب را وارد کنید:</p>
+      <input type="number" id="bookCount" min="1" value="1" oninput="calcPrice()" style="padding:8px;width:100px;font-size:16px;">
+      <p>قیمت نهایی: <strong id="finalPrice"></strong> تومان</p>
+      <a class="btn" href="#" onclick="sendBookOrder();return false;">ارسال سفارش</a>
+
+      <script>
+        var pricePerBook = 75000;
+        function showToast(msg) {
+          var t = document.getElementById("toast");
+          t.textContent = msg;
+          t.style.display = "block";
+          setTimeout(function () { t.style.display = "none"; }, 6000);
+        }
+        function calcPrice() {
+          var count = document.getElementById("bookCount").value;
+          var total = count * pricePerBook;
+          document.getElementById("finalPrice").textContent = total.toLocaleString("fa-IR");
+        }
+        function sendBookOrder() {
+          var count = document.getElementById("bookCount").value;
+          var price = document.getElementById("finalPrice").textContent;
+          var msg = "سلام، سفارش فنرزنی و منگنه کتاب درسی:\nتعداد کتاب: " + count + "\nقیمت نهایی: " + price + " تومان";
+          var chat = "https://eitaa.ir/tebyan_8449";
+          sendToSheet("فنرزنی", "تعداد: " + count + " - قیمت: " + price + " تومان", "", "");
+          navigator.clipboard.writeText(msg).then(function () {
+            showToast("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
+            window.location.href = chat;
+          }).catch(function () {
+            window.location.href = chat;
+          });
+        }
+        function sendToSheet(type, details, name, phone) {
+          var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSddX-JLIy3NFGOkaRatuhEfsZuBuqd-g7gkjRZa52WAZhwxIg/formResponse";
+          var data = new FormData();
+          data.append("entry.1778279713", type);
+          data.append("entry.129922065", details);
+          data.append("entry.2136911934", name);
+          data.append("entry.1860252129", phone);
+          fetch(formUrl, { method: "POST", mode: "no-cors", body: data });
+        }
+        calcPrice();
+      </script>
+    </details>
   </section>
 
   <section>
@@ -326,26 +323,30 @@ data.append("entry.1777667639", meliNumber);
       </ul>
     </div>
   </section>
-<section>
-  <h2 id="address">آدرس ما</h2>
-  <div class="card">بردسیر خیابان شریعتی کنار مسجد جامع</div>
-  <a class="btn" href="https://maps.app.goo.gl/Wir7impxUzL4BZd5A">مسیریابی</a>
-</section>
+
+  <section>
+    <h2 id="address">آدرس ما</h2>
+    <div class="card">بردسیر خیابان شریعتی کنار مسجد جامع</div>
+    <a class="btn" href="https://maps.app.goo.gl/Wir7impxUzL4BZd5A">مسیریابی</a>
+  </section>
+
   <section>
     <h2 id="contact">تماس با ما</h2>
     <p>برای هماهنگی و پرسش، تماس بگیرید:</p>
-    <a class="btn" href="tel:09393488449">تماس بگیرید</a> <div style="margin-top:12px;">
-  <a class="btn" style="background:#229ED9;margin:4px;" href="https://t.me/tebyan8449">تلگرام</a>
-  <a class="btn" style="background:#8e44ad;margin:4px;" href="https://rubika.ir/tebyan8449">روبیکا</a>
-  <a class="btn" style="background:#ff7a00;margin:4px;" href="https://eitaa.com/tebyan8449">ایتا</a>
-</div>
+    <a class="btn" href="tel:09393488449">تماس بگیرید</a>
+    <div style="margin-top:12px;">
+      <a class="btn" style="background:#229ED9;margin:4px;" href="https://t.me/tebyan8449">تلگرام</a>
+      <a class="btn" style="background:#8e44ad;margin:4px;" href="https://rubika.ir/tebyan8449">روبیکا</a>
+      <a class="btn" style="background:#ff7a00;margin:4px;" href="https://eitaa.com/tebyan8449">ایتا</a>
+    </div>
   </section>
 
   <footer>© کافی‌نت تبیان</footer>
-<script>
-  function toggleMenu() {
-    document.getElementById("sideMenu").classList.toggle("open");
-  }
-</script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
