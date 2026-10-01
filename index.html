@@ -164,7 +164,21 @@ html { scroll-behavior: smooth; }
         A3: { one: 73000, two: 81200 }
       }
     };
-
+function sendPrintOrder() {
+  var type = document.getElementById("pType").value === "bw" ? "سیاه و سفید" : "رنگی";
+  var size = document.getElementById("pSize").value;
+  var sides = document.getElementById("pSides").value === "one" ? "یک رو" : "دو رو";
+  var count = document.getElementById("pCount").value;
+  var price = document.getElementById("pTotal").textContent;
+  var msg = "سلام، سفارش پرینت و کپی:\nنوع: " + type + "\nسایز: " + size + "\n" + sides + "\nتعداد: " + count + "\nقیمت: " + price + " تومان";
+  var chat = "https://eitaa.ir/tebyan_8449";
+  navigator.clipboard.writeText(msg).then(function () {
+    alert("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
+    window.location.href = chat;
+  }).catch(function () {
+    window.location.href = chat;
+  });
+}
     function calcPrint() {
       var type = document.getElementById("pType").value;
       var size = document.getElementById("pSize").value;
