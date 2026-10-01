@@ -158,6 +158,18 @@ if (type === "color" && count > 10) {
       var total = count * pricePerBook;
       document.getElementById("finalPrice").textContent = total.toLocaleString("fa-IR");
     }
+    function sendBookOrder() {
+  var count = document.getElementById("bookCount").value;
+  var price = document.getElementById("finalPrice").textContent;
+  var msg = "سلام، سفارش فنرزنی و منگنه کتاب درسی:\nتعداد کتاب: " + count + "\nقیمت نهایی: " + price + " تومان";
+  var chat = "https://rubika.ir/markkabir";
+  navigator.clipboard.writeText(msg).then(function () {
+    alert("سفارش کپی شد. در چت باز شده آن را Paste کنید و بفرستید.");
+    window.location.href = chat;
+  }).catch(function () {
+    window.location.href = chat;
+  });
+}
     calcPrice();
   </script>
 </details>
