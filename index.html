@@ -140,7 +140,7 @@ html { scroll-behavior: smooth; }
   <option value="کارفرما">بیمه کارفرما</option>
 </select>
 <input type="text" id="bimeName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
-  <input type="text" id="bimeMeliNumber" placeholder="شماره ملی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
+  <input type="text" id="MeliNumber" placeholder="شماره ملی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
 <input type="text" id="bimePhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
 <br>
 <a class="btn" href="#" onclick="sendBimeOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
@@ -168,7 +168,7 @@ function sendBimeOrder() {
 <p>در صورت تمایل، کافی‌نت کار شما را انجام می‌دهد:</p>
 <input type="text" id="eblaghName" placeholder="نام و نام خانوادگی" style="padding:8px;font-size:16px;width:90%;">
 <input type="text" id="eblaghPhone" placeholder="شماره تماس" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">
-    <input type="text" id="eblagpasscode" placeholder="رمز شخصی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">  
+    <input type="text" id="MeliNumber" placeholder="رمز شخصی" style="padding:8px;font-size:16px;width:90%;margin-top:8px;">  
 <br>
 <a class="btn" href="#" onclick="sendEblaghOrder();return false;" style="margin-top:8px;">ثبت و ارسال</a>
 
@@ -297,6 +297,16 @@ if (type === "color" && count > 10) {
     window.location.href = chat;
   });
 }
+  function sendToSheet(type, details, name, phone) {
+  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSddX-JLIy3NFGOkaRatuhEfsZuBuqd-g7gkjRZa52WAZhwxIg/formResponse";
+  var data = new FormData();
+  data.append("entry.1778279713", type);
+  data.append("entry.129922065", details);
+  data.append("entry.2136911934", name);
+  data.append("entry.1860252129", phone);
+data.append("entry.1777667639", MeliNumber);
+  fetch(formUrl, { method: "POST", mode: "no-cors", body: data });
+    }  
     calcPrice();
   </script>
 </details>
